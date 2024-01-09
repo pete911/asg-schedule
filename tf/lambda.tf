@@ -55,8 +55,10 @@ resource "null_resource" "build_source" {
   }
 
   triggers = {
-    main = filemd5("${path.module}/source/main.go")
+    asg  = filemd5("${path.module}/source/asg.go")
     aws  = filemd5("${path.module}/source/aws.go")
+    main = filemd5("${path.module}/source/main.go")
+    tag  = filemd5("${path.module}/source/tag.go")
   }
 }
 

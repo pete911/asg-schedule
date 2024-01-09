@@ -8,9 +8,7 @@ import (
 	"strings"
 )
 
-var (
-	logger = slog.New(slog.NewTextHandler(os.Stderr, nil))
-)
+var logger = slog.New(slog.NewTextHandler(os.Stderr, nil))
 
 type Handler struct {
 	client  Client
